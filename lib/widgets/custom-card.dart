@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:store_app/models/product-model.dart';
 
 class CustomCard extends StatelessWidget {
-  const CustomCard({super.key});
-
+   CustomCard({required this.product, super.key,});
+ProductModel product ;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,7 +30,7 @@ class CustomCard extends StatelessWidget {
                   style: TextStyle(color: Colors.grey, fontSize: 16),
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 3,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -49,6 +50,7 @@ class CustomCard extends StatelessWidget {
           ),
         ),
       ),
+      Positioned(right: 32, top: -60, child: Image.network(height: 100, "src"))
     ]));
   }
 }
